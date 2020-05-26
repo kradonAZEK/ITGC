@@ -1,0 +1,5 @@
+=IF([Ticket Status]="Approved for Migration", IF([HStatus]="Submitted for Migration", TRUE, FALSE),
+ IF([Ticket Status]="Migration Failed: Closed", IF([HStatus]="Approved for Migration", TRUE, FALSE),
+ IF([Ticket Status]="Migration Succeeded: Closed", IF([HStatus]="Approved for Migration", TRUE, FALSE),
+TRUE)
+ 
